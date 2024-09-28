@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/********* 全体 *********/
+HTML, BODY{
+    height: 100%;
+}
+BODY{
+    /* font-family: "ヒラギノ角ゴ", "Meiryo UI", "メイリオ", "Osaka"; */
+
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "BIZ UDPGothic",
+    "Meiryo UI",
+    sans-serif;
+
+    background-color: black;
+    color: white;
+    margin: 0 8px;
+    padding: 0 0 0 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.red{
+    color: red;
+}
+.black{
+    color: black;
+}
+.hr-red{
+    border-top: 2px dotted red;
+    border-bottom: 1px dotted darkred;
+}
+A{
+    color:inherit;
+}
+.text{
+    margin-left: 5px;
+    padding-bottom: 10px;
+    line-height: 24px;
+}
+.mini{
+    font-size: 12px;
+    line-height: 14px;
+}
+.bold{
+    font-weight: bold;
+}
+.date{
+    margin-left: 10px;
+    font-size: 12px;
+}
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* 見出し */
+H1{
+    padding: 0.25px 0;
+}
+H1::after{
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, #b789cc, transparent);
+    background: linear-gradient(to right, #b789cc, transparent);
+}
+/* infoの記事タイトル用 */
+H2{
+    font-size: 20px;
+    color: #3d2946;
+    background: #f4f4f4;/*背景色*/
+    border-left: solid 5px #b789cc;/*左線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+    padding-left: 5px;
+    padding-top: 15px;
+    margin: -15px 0 10px 0;
+}
+/* アルバムタイトル用 */
+H3{
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin: -15px 0 10px 0;
+}
+/* サブスク等見出し */
+H4{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* SNSリンク用 */
+H6{
+    padding: 2px 10px;
+    border-top: 1px solid #b789cc;
+    border-bottom: 1px solid #b789cc;
+    font-size: 12px;
+    margin: 10px 0 10px 0;
+}
+
+/********* ヘッダー関連 *********/
+HEADER{
+    background: black;
+    position: sticky;
+    top: 0; left: 0;
+    width: 100%;
+    height: 120px;
+    padding: 5px 0;
+}
+.layout-top{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+.layout-top IMG{
+    display: block;
+    max-width: 222px;
+    height:fit-content;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.menu A{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgb(223, 137, 231), #3d2946);
+    border: 1px solid black;
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    width: 25%;
+    padding: 8px;
+    margin-right: 3px;
+    transition: 0.3s;
+}
+.menu A:hover{
+    color: black;
+    background: linear-gradient(rgb(255, 255, 255), #b789cc);
+    cursor: pointer;
+}
+
+/********* メインコンテンツ関連 *********/
+.contents{
+    width: 100%;
+    padding-bottom: 40px;
+    overflow: auto;
+}
+/* profile */
+.layout-profile{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+IMG.img-profile{
+    width: 30%;
+    max-width: 50%;
+    height: 30%;
+    max-height: 50%;
+}
+/* release */
+.layout-release{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-bottom: 10px;
+}
+IMG.img-release{
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+}
+.layout-subscribe{
+    margin-left: 15px;
+}
+IFRAME.video{
+    border: 4px solid #3d2946;
+    width: 560px;
+    height: 315px;
+}
+/* download */
+.layout-download{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    margin-bottom: 10px;
+}
+IMG.img-download{
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+}
+
+/********* フッター関連 *********/
+FOOTER {
+    position: fixed; /* フッターを固定する */
+    height: 30px;
+    bottom: 0; /* 上部から配置の基準位置を決める */
+    left: 0; /* 左から配置の基準位置を決める */
+    width: 100%; /* フッターの横幅を指定する */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 5px 0;
+    background: -webkit-linear-gradient(to right, #b789cc, transparent);
+    background: linear-gradient(to right, #b789cc, transparent);
+}
