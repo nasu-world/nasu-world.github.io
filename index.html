@@ -6,7 +6,15 @@
     <title>Nasu Official Web Site -ボカロPなすの公式サイト-</title>
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        fetch("include/header.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#header").innerHTML = data);
+        fetch("include/footer.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#footer").innerHTML = data);
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -40,7 +48,7 @@
         </div>
 
     </div>
-    
+
     <!-- Footer -->
     <div id="footer"></div>
 
