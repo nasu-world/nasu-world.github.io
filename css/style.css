@@ -40,7 +40,7 @@ A{
 }
 .text{
     margin-left: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     line-height: normal;
 }
 @media screen and (max-width: 400px){
@@ -60,6 +60,15 @@ A{
     margin-left: 10px;
     font-size: 12px;
 }
+.flash{
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+    margin-left: 4px;
+    animation: flashing 1s ease-in-out infinite alternate;
+}
+@keyframes flashing {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
 .center{
     display: flex;
     flex-direction: row;
@@ -76,6 +85,16 @@ H1::after{
     height: 4px;
     background: -webkit-linear-gradient(to right, #b789cc, transparent);
     background: linear-gradient(to right, #b789cc, transparent);
+    transform: translateX(-100%);
+    animation: back-slidein 1s forwards;
+}
+@keyframes back-slidein{
+    0% {
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 /* infoの記事タイトル用 */
 H2{
@@ -120,6 +139,7 @@ H6{
         margin: 3px 0 17px 0;
     }
 }
+
 /********* ヘッダー関連 *********/
 HEADER{
     background: black;
@@ -145,6 +165,9 @@ HEADER{
     display: block;
     max-width: 222px;
     height:fit-content;
+}
+.layout-top IMG:hover{
+    filter: brightness(0.8);
 }
 .menu{
     width: 100%;
@@ -212,6 +235,20 @@ IMG.img-profile{
     max-width: 50%;
     height: auto;
     max-height: 50%;
+    animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+@keyframes fadeup{
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* release */
 .layout-release{
