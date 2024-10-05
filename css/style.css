@@ -1,5 +1,9 @@
 @charset "utf-8";
-
+@font-face {
+    font-family: "SourceHanSansJP-Heavy"; /*任意のフォントファミリー名でOK*/
+    src: url("/font/SourceHanSansJP-Heavy.otf") format("opentype"); /*fontがあるパスを書いて、formatを指定*/
+    font-display: swap; /*ダウンロード状況に応じてフォントの表示を変える */
+  }
 /********* 全体 *********/
 HTML, BODY{
     height: 100%;
@@ -7,7 +11,7 @@ HTML, BODY{
 BODY{
     /* font-family: "ヒラギノ角ゴ", "Meiryo UI", "メイリオ", "Osaka"; */
 
-    font-family: "Helvetica Neue",
+    font-family: "SourceHanSansJP-Heavy", "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
@@ -41,7 +45,8 @@ A{
 .text{
     margin-left: 5px;
     padding-bottom: 20px;
-    line-height: normal;
+    line-height: 20px;
+    padding-left: 10px;
 }
 @media screen and (max-width: 400px){
     .text{
@@ -78,6 +83,7 @@ A{
 /* 見出し */
 H1{
     padding: 0.25px 0;
+    padding-left: 10px;
 }
 H1::after{
     content: "";
@@ -87,6 +93,7 @@ H1::after{
     background: linear-gradient(to right, #b789cc, transparent);
     transform: translateX(-100%);
     animation: back-slidein 1s forwards;
+    margin-left: -10px;
 }
 @keyframes back-slidein{
     0% {
@@ -119,6 +126,11 @@ H3{
     padding-top: 15px;
     margin: -15px 0 10px 0;
 }
+@media screen and (max-width: 400px){
+    H3{
+        font-size: 19px;
+    }
+}
 /* サブスク等見出し */
 H4{
     margin-top: 5px;
@@ -126,7 +138,7 @@ H4{
 }
 /* SNSリンク用 */
 H6{
-    padding: 2px 10px;
+    padding: 0px 10px;
     border-top: 1px solid #b789cc;
     border-bottom: 1px solid #b789cc;
     font-size: 12px;
@@ -178,7 +190,7 @@ HEADER{
     display: block;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     color: white;
     background: linear-gradient(rgb(223, 137, 231), #3d2946);
