@@ -232,6 +232,11 @@ HEADER{
         font-size: 15px;
     }
 }
+IMG.img-index{
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+}
 /* profile */
 .layout-profile{
     width: 100%;
